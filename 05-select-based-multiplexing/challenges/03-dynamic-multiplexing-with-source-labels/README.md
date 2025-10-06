@@ -26,7 +26,10 @@ You need to build a **dynamic fan-in multiplexer** in Go that:
     
 
 ```go
-type TaggedMessage struct {     Source string     Value  string }
+type TaggedMessage struct {     
+	Source string     
+	Value  string 
+}
 ```
 
 - Messages from `sportsChan` might look like:
@@ -47,7 +50,8 @@ type TaggedMessage struct {     Source string     Value  string }
     
 
 ```go
-gamingChan := make(chan string) AddChannel("gaming", gamingChan)
+gamingChan := make(chan string) 
+AddChannel("gaming", gamingChan)
 ```
 
 - And support removing channels dynamically:
